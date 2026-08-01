@@ -6,47 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Do you love me?</title>
     <link rel="stylesheet" href="style.css">
-    <!-- เรียกใช้ Canvas Confetti สำหรับเอฟเฟกต์พลุกระดาษ -->
+<!-- Include Canvas Confetti for confetti effects -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <!-- หน้าที่ 1: คำถามถามรักไหม -->
+        <!-- Section 1: "Do You Love Me?" -->
         <div id="page1">
             <img id="gif"
                 src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTgyaGlieHM2bTRoZWZ3eHN5enk4dDNweHNibzYzMHA1eHV4eHhwYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/8vL92ykY64CurPrmEH/giphy.gif"
                 alt="Cute GIF">
 
             <h1 id="question">Do you love me? 💖</h1>
-            <!-- ปุ่ม Yes/No  -->
+            <!-- Yes/No but  -->
             <div class="btn-group">
                 <button id="yes-btn">Yes</button>
                 <button id="no-btn">No</button>
             </div>
-
-            <!-- ปุ่ม Next  -->
-            <button id="next-btn" class="hidden">ไปต่อกันเลย ➡️</button>
         </div>
-        <!-- หน้าที่ 2: ฉลองครบรอบ -->
-        <div id="page2" class="hidden anniversary-page">
-
-            <div class="badge">HAPPY 3RD MONTH</div>
-
-            <img src="https://i.pinimg.com/originals/de/ff/b6/deffb6e9cd6d5ab290f3297693b67985.gif"
-                alt="Anniversary GIF">
-
-            <h1 class="gradient-text">Happy 3 Months! 🎉✨</h1>
-
-            <div class="message-box">
-                <p>ครบรอบ 3 เดือนแล้วนะคนเก่ง 💖</p>
-                <p>3เดือนแล้วนะที่ได้อยู่ด้วยกัน ขอบคุณที่ทนกับเค้าได้นะ ขอบคุณสำหรับทุกๆอย่าง
-                    และขอให้อยู่ด้วยกันไปนานๆนะครับ 💕</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- แบ็กดร็อปหัวใจลอย -->
+    <!-- Floating Hearts Backdrop -->
     <div class="hearts-background">
         <div class="heart" style="left: 10%; animation-delay: 0s;">💖</div>
         <div class="heart" style="left: 25%; animation-delay: 2s; font-size: 1.5rem;">💕</div>

@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    background: radial-gradient(circle at center, #ffe6e9 0%, #ffd2da 100%);
+    overflow: hidden;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.hearts-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.heart {
+    position: absolute;
+    bottom: -50px;
+    font-size: 1.2rem;
+    opacity: 0.7;
+    animation: floatUp 7s infinite linear;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-105vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.container {
+    position: relative;
+    z-index: 10;
+    padding: 35px 25px;
+    border-radius: 25px;
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container img {
+    width: 200px;
+    height: 160px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 12px;
+
+}
+
+h1 {
+    color: #d32f2f;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    width: 100%;
+    min-height: 80px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s ease, font-size 0.2s ease, left 0.15s ease, top 0.15s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#yes-btn {
+    background-color: #ff4d6d;
+    color: white;
+    box-shadow: 0 4px 12px rgba(255, 77, 109, 0.3);
+}
+
+#no-btn {
+    background-color: #f8f9fa;
+    color: #555;
+    border: 1px solid #ccc;
+    z-index: 10;
+}
+
