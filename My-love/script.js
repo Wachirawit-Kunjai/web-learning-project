@@ -36,3 +36,25 @@ function moveButton() {
     noBtn.style.zIndex = "999";
 }
 
+// When pressing the No button
+function handleNoAction(e) {
+    if (e.type === "touchstart") e.preventDefault();
+
+    noCount++;
+
+    const textIndex = Math.min(noCount - 1, noTexts.length - 1);
+    noBtn.textContent = noTexts[textIndex];
+
+    // Expand the Yes button
+    if (yesFontSize < 3) {
+        yesFontSize += 0.3;
+        yesBtn.style.fontSize = `${yesFontSize}rem`;
+        yesBtn.style.padding = `${10 * yesFontSize}px ${20 * yesFontSize}px`;
+    }
+
+    // Dodge outer card from index 5 ("I'm sulking, so don't touch me! 😤")
+    if (textIndex >= noTexts.length - 2) {
+        moveButton();
+    }
+}
+
