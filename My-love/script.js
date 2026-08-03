@@ -58,3 +58,23 @@ function handleNoAction(e) {
     }
 }
 
+noBtn.addEventListener("click", handleNoAction);
+
+// Dodge instantly on hover for final texts
+noBtn.addEventListener("mouseover", () => {
+    if (noCount >= noTexts.length - 1) {
+        moveButton();
+    }
+});
+
+// When "Yes" is pressed
+yesBtn.addEventListener("click", () => {
+    question.textContent = "I already knew that 🥰❤️";
+    gif.src = "https://i.pinimg.com/originals/31/ef/32/31ef321cfdf47abcf35e43afd8844260.gif";
+
+    btnGroup.style.display = "none";
+
+    if (nextBtn) {
+        nextBtn.classList.remove("hidden");
+    }
+});
