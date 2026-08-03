@@ -16,3 +16,23 @@ const noTexts = [
     "I'm sulking, so don't touch me! 😤"
 ];
 
+let noCount = 0;
+let yesFontSize = 1;
+// Moves "No" button randomly
+
+function moveButton() {
+    const padding = 20;
+    const btnRect = noBtn.getBoundingClientRect();
+
+    const maxX = window.innerWidth - btnRect.width - padding;
+    const maxY = window.innerHeight - btnRect.height - padding;
+
+    const randomX = Math.max(padding, Math.floor(Math.random() * maxX));
+    const randomY = Math.max(padding, Math.floor(Math.random() * maxY));
+
+    noBtn.style.position = "fixed";
+    noBtn.style.left = `${randomX}px`;
+    noBtn.style.top = `${randomY}px`;
+    noBtn.style.zIndex = "999";
+}
+
